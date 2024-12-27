@@ -29,9 +29,9 @@ inputs:
   cli-version:
     description: The version of the uploader to use.
     required: false
-# runs:
-#   using: composite
-#   steps:
+runs:
+  using: composite
+  steps:
 #     - name: Upload test results with CLI version ${{ inputs.cli-version }} to prod
 #       if: "${{ inputs.cli-version != '' }}"
 #       continue-on-error: true
