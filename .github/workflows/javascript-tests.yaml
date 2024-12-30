@@ -47,6 +47,8 @@ jobs:
           cli-version: ${{ inputs.cli-version }}
           junit-paths: "**/mocha_test.xml"
           run: npm run mocha-test
+        env:
+          BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN }}
 
       - name: Run Jest Tests
         if: ${{ always() }}
@@ -61,6 +63,8 @@ jobs:
           cli-version: ${{ inputs.cli-version }}
           junit-paths: "**/*_test.xml,**/junitresults-*.xml"
           run: npm run jest-test
+        env:
+          BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN }}
 
       - name: Run Jasmine Tests
         if: ${{ always() }}
@@ -75,6 +79,8 @@ jobs:
           cli-version: ${{ inputs.cli-version }}
           junit-paths: "**/*_test.xml,**/junitresults-*.xml"
           run: npm run jasmine-test
+        env:
+          BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN }}
 
       - name: Run Playwright Tests
         if: ${{ always() }}
@@ -89,3 +95,5 @@ jobs:
           cli-version: ${{ inputs.cli-version }}
           junit-paths: "**/*_test.xml,**/junitresults-*.xml"
           run: npm run playwright-test
+        env:
+          BUILDKITE_ANALYTICS_TOKEN: ${{ secrets.BUILDKITE_ANALYTICS_TOKEN }}
