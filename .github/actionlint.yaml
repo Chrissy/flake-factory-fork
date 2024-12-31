@@ -1,4 +1,4 @@
 self-hosted-runner:
   labels:
-    - public-amd64-small
-    - public-amd64-large
+    - ubuntu-latest
+    - ubuntu-latest

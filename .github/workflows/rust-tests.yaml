@@ -2,7 +2,7 @@ name: Rust Tests
 
 on:
   schedule:
-    - cron: "*/6 * * * *"
+    - cron: 0 */6 * * *
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -17,7 +17,7 @@ on:
 
 jobs:
   test:
-    runs-on: public-amd64-small
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4

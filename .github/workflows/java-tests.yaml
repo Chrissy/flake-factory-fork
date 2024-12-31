@@ -2,7 +2,7 @@ name: Java Tests
 
 on:
   schedule:
-    - cron: "*/6 * * * *"
+    - cron: 0 */6 * * *
   pull_request:
     branches: [main]
   workflow_dispatch:

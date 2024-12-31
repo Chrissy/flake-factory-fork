@@ -1,13 +1,3 @@
 {
-  "reporters": [
-    "default",
-    [
-      "jest-junit",
-      {
-        "outputDirectory": "tests/jest",
-        "outputName": "jest_junit_test.xml",
-        "addFileAttribute": "true"
-      }
-    ]
-  ]
+  "reporters": ["default", "buildkite-test-collector/jest/reporter"]
 }
